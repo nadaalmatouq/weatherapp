@@ -23,7 +23,7 @@ struct ContentView: View {
                 
                 Text("Mostly clear").foregroundColor(.white)
                 
-                Text("22°").foregroundColor(.white).font(.system(size: 90)).multilineTextAlignment(.center).padding(.horizontal).offset(x: 10)
+                Text("22°").foregroundColor(.white).font(.system(size: 90, weight: .thin)).multilineTextAlignment(.center).padding(.horizontal).offset(x: 10)
                 
                 
                 
