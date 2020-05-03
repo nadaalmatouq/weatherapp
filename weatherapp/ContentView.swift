@@ -13,7 +13,7 @@ struct ContentView: View {
         
         ZStack{
             
-            Image("Night").edgesIgnoringSafeArea(.all)
+            Image("Night").resizable().edgesIgnoringSafeArea(.all)
            
             VStack{
             
@@ -27,7 +27,7 @@ struct ContentView: View {
                 
                 
                 
-            }.offset(y: -150)
+            }.offset(y: -10)
             
             HStack{
                 Text("Tuesday").foregroundColor(.white).bold()
@@ -36,12 +36,12 @@ struct ContentView: View {
            
             Spacer()
                 
-                Text("31").foregroundColor(.white)
-                Text("24").foregroundColor(.white)
+                Text("31").foregroundColor(.white).padding(.horizontal)
+                Text("24").foregroundColor(.white).padding(.horizontal)
                 
-            }
+            }.padding(10)
          
-                HStack(alignment: .center,spacing: 10){
+                HStack(alignment: .center,spacing: 15){
              
                 
                 Text("Now").foregroundColor(.white).bold()
@@ -52,8 +52,23 @@ struct ContentView: View {
                 Text("9AM").foregroundColor(.white).bold()
                 Text("10AM").foregroundColor(.white).bold()
                     
-            }
-                HStack(alignment: .center,spacing: 20){
+                }.padding(.horizontal,5)
+                
+                
+                HStack(alignment: .center,spacing: 35){
+                    
+                    Image(systemName: "moon.zzz.fill").foregroundColor(.white)
+                    Image(systemName: "moon.zzz.fill").foregroundColor(.white)
+                     Image(systemName: "sunset.fill").foregroundColor(.white)
+                     Image(systemName: "cloud.sun.rain.fill").foregroundColor(.white)
+                    Image(systemName: "moon.zzz.fill").foregroundColor(.white)
+                    Image(systemName: "moon.zzz.fill").foregroundColor(.white)
+                    Image(systemName: "moon.zzz.fill").foregroundColor(.white)
+                }.padding(5)
+                
+                
+                
+                HStack(alignment: .center,spacing: 25){
                  
                     
                     Text("22°").foregroundColor(.white).bold()
@@ -67,17 +82,16 @@ struct ContentView: View {
                     
                 }
                 
-                HStack{
+                
+                VStack{
+                WeekForcast()
+                    WeekForcast()
+                    WeekForcast()
+                    WeekForcast()
+                    WeekForcast()
+                    WeekForcast()
                     
-                    
-                    Text("Wednesday").foregroundColor(.white).bold()
-                    
-                     Text("29").foregroundColor(.white).bold()
-                     Text("24").foregroundColor(.white).bold()
-                    
-                    
-                    
-                }
+                }.padding(.horizontal,10)
                 
             
             
@@ -85,7 +99,7 @@ struct ContentView: View {
             
         }
         
-        }
+            }.edgesIgnoringSafeArea(.all)
         
     }
 }
@@ -95,5 +109,25 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct WeekForcast: View {
+    var body: some View {
+        ZStack{
+            HStack(alignment: .center){
+                
+                
+                Text("Wednesday").foregroundColor(.white).bold()
+                Spacer()
+                Image(systemName: "cloud.sun.rain.fill").foregroundColor(.white)
+                Spacer()
+                Text("29").foregroundColor(.white).bold().padding(.horizontal)
+                Text("24").foregroundColor(.white).bold().padding(.horizontal)
+                
+                
+                
+            }
+        }
     }
 }
