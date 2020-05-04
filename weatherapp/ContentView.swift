@@ -14,12 +14,9 @@ struct ContentView: View {
         ZStack{
             
             Image("Night").resizable().edgesIgnoringSafeArea(.all)
-           
-            VStack{
-            
             VStack{
                 
-                Text("Mishrif").foregroundColor(.white).font(.largeTitle).bold().multilineTextAlignment(.center)
+                Text("Mishrif").foregroundColor(.white).font(.system(size:35)).multilineTextAlignment(.center)
                 
                 Text("Mostly clear").foregroundColor(.white)
                 
@@ -27,7 +24,12 @@ struct ContentView: View {
                 
                 
                 
-            }.offset(y: -10)
+            
+           
+                ScrollView(.horizontal){
+            VStack{
+            
+         
             
             HStack{
                 Text("Tuesday").foregroundColor(.white).bold()
@@ -95,12 +97,12 @@ struct ContentView: View {
                 
             
             
-            
+                    }
             
         }
         
             }.edgesIgnoringSafeArea(.all)
-        
+        }
     }
 }
 
